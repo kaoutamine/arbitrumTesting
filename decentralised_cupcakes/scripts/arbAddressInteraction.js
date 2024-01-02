@@ -29,11 +29,12 @@ async function registerAndLookup() {
     const registeredAdresses = walletDetails.slice(0, 5).map(wallet => wallet.address);
     const privateKeys = alletDetails.slice(0, 5).map(wallet => wallet.privateKey);
     //I got my answer by testing : the addresses need to be created on the blockchain, the arbaddress function checks. Need to figure out how to register new addresses...
+    //now it becomes obvious that the way i coded the address generation does not make sense. I should just generate them from the devnode itself and then store them somewhere. 
     const account = createAccountFromPrivateKey(myPrivateKey);
 
     privateKeys.forEach(privateKey => {
         const account = createAccountFromPrivateKey(privateKey);
-        if (account) {
+        if (account) { 
             console.log(`Ethereum Account Created for Private Key: ${privateKey}`);
             console.log(`Address: ${account.address}`);
             
