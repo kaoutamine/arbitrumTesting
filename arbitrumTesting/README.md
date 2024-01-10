@@ -27,6 +27,21 @@ This project centers on the Arbitrum platform, a prominent layer-2 scaling solut
 2. Navigate to the repository folder on your local machine.
 3. Run the scripts from the repository to deploy smart contracts that interact with Arbitrum precompiles. (We have done this on the nitro testnode)
 
+### Workflow for a test run 
+have two terminals running.
+One should be in the nitro devnode and you should use the following command :
+./test-node.bash 
+it is possible to also have the blockscout explorer running :
+./test-node.bash -- blockscout
+
+If necessary, use sudo.
+
+In the other terminal, go to :
+arbitrumTesting (this repository)
+
+You can run the scripts using the following :
+npx hardhat run scripts/arbAddressInteraction.js --network testNode (for example. for the arbAddressInteraction script)
+
 ## Conclusion
 
 This project aims to contribute play around  the precompiles of the Arbitrum platform and see if we can find out interesting situations or scenarios.
