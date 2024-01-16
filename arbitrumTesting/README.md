@@ -32,7 +32,7 @@ have two terminals running.
 One should be in the nitro devnode and you should use the following command :
 ./test-node.bash 
 it is possible to also have the blockscout explorer running :
-./test-node.bash -- blockscout
+./test-node.bash --blockscout
 
 If necessary, use sudo.
 
@@ -41,6 +41,12 @@ arbitrumTesting (this repository)
 
 You can run the scripts using the following :
 npx hardhat run scripts/arbAddressInteraction.js --network testNode (for example. for the arbAddressInteraction script)
+
+### extra information
+the addresses file contains the addresses available on the L2 blockchain, in the following format :
+address 
+private key
+Need to find a way to create more 
 
 ## Conclusion
 
