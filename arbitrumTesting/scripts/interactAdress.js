@@ -34,7 +34,7 @@ async function registerAndLookup() {
     const indexKnown = await contract.methods.lookupAddress(myAddress).call();
 
 
-    //lookup the address that has not been registered
+    //lookup the address that has not been registered (how do i make new valid addresses????)
     //
     //const indexUknown = await contract.methods.lookupAddress(addressToLookup).call();
 
